@@ -7,9 +7,17 @@ fetch('densidad_santafe.geojson') // Call the fetch function passing the url of 
             style: function (feature) {
                 return {
                     color: feature.properties.color,
-                    fill: feature.properties.color,
-                    'fill-opacity': 0.9
+                    fillColor: feature.properties.color,
+                    fillOpacity: 0.5
                 }
+            },
+            onEachFeature: function (feature, layer) {
+                // {"cartodb_id":43402,"prov_id":"82","poblacion":"602.000000000000000","densidad":2337.80581253,"area":"0.068842976684852","color":"#df4317"}
+                layer.bindPopup("<div>" + 
+                                    "<div>Población: " + parseInt(feature.properties.poblacion, 10) + "hab <div>" +
+                                    "<div>Área: " + parseFloat(feature.properties.area) + " km2<div>" + 
+                                    "<div>Densidad: " + parseFloat(feature.properties.densidad).toFixed(2) + " hab/km2<div>" +
+                                "<div>");
             }
         }).addTo(map);
     })
