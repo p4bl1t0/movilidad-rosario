@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+#escala {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    width: 200px;    
+    font-size: 12px;
+    z-index: 99999;
+}
+
+#mapid {
+    height: 100vh;
+}
+
+
+.marker-cluster-large div {
+    background-color: blue;
+    color: white;
+}
+
+
+.marker-cluster-medium div {
+    background-color: orange;
+    color: white;
+}
+
+
+.marker-cluster-small div {
+    background-color: orangered;
+    color: white;
+}
+
+.marker-cluster {
+    background-clip: padding-box;
+    border-radius: 20px;
+}
+
+.marker-cluster div {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    text-align: center;
+    border-radius: 15px;
+    font: 12px Arial, Helvetica, sans-serif;
+}
+
+.marker-cluster span {
+    line-height: 25px;
+}
+
+.marker-cluster.ventas_tup {
+    background-clip: padding-box;
+    border-radius: 0;
+    margin: 0;
+}
+
+.marker-cluster.ventas_tup div {
+    border-radius: 0;
+    margin: 0;
+}
+.marker-cluster-large.ventas_tup div {
+    background-color: #00FF00;
+    color: black;
+}
+.marker-cluster-medium.ventas_tup div {
+    background-color: yellow;
+    color: black;
+}
+.marker-cluster-small.ventas_tup div {
+    background-color: red;
+    color: black;
+}
