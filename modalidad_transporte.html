@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distribución modal ciudad</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/modalidad.css" />
+    </head>
+    <body> 
+        <div id="app">
+            <div class="wrapper">
+                <h1>Cómo las personas en {{ name }} se mueven cada día</h1>
+            </div>
+            <div class="icon-wrapper">
+                <span class="icon auto" v-for="n in transport.car">
+                    <img src="img/auto.svg" /> 
+                </span>
+        
+                <span class="icon colectivo" v-for="n in transport.bus">
+                    <img src="img/colectivo.svg" /> 
+                </span>
+        
+                <span class="icon bicicleta" v-for="n in transport.bike">
+                    <img src="img/bicicleta.svg" /> 
+                </span>
+                
+        
+                <span class="icon peaton"  v-for="n in transport.walk">
+                    <img src="img/peaton.svg" /> 
+                </span>
+            </div>
+            <div class="wrapper wrapper-graphic">
+                <h2>Configurá el gráfico para tu ciudad</h2>
+                <div class="form-line">
+                    <label for="name">Ciudad:</label>
+                    <input id="name" type="text" v-model="name" />
+                </div>
+                <div class="form-line">
+                    <label for="bus">Colectivo:</label>
+                    <input id="bus" type="number" v-model.number="transport.bus" min="0" max="100" step="1" />
+                    <label for="car">Auto:</label>
+                    <input id="car" type="number" v-model.number="transport.car" min="0" max="100" step="1"  />
+                    <label for="bike">Bici:</label>
+                    <input id="bike" type="number" v-model.number="transport.bike"  min="0" max="100" step="1" />
+                    <label for="walk">Caminando:</label>
+                    <input id="walk" type="number" v-model.number="transport.walk"  min="0" max="100" step="1" />
+                </div>
+                <small>El gráfico no verifica que los valores ingresados cierren en 100.</small>
+                <h2>Créditos</h2>
+                <div>Desarrollado por <a href="https://movilizame.com.ar">Pablo Botta</a></div>
+                <div><small>Pedestrian icon made by <a href="https://www.flaticon.com/authors/scott-de-jonge" title="Scott de Jonge">Scott de Jonge</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
+                <div><small>Car icon made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
+                <div><small>Bus icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
+                <div><small>Bike icon made by <a href="https://www.flaticon.com/authors/vectorgraphit" title="Vectorgraphit">Vectorgraphit</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></small></div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+        <script src="js/modalidad.js"></script>
+    </body>
+</html>

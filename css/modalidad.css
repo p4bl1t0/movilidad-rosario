@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 300;
+    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+html,
+body {
+    color: white;
+    background: #222;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "system";
+}
+
+a {
+    color: #1b72b9;
+}
+[type="number"] {
+    width: 10%;
+}
+h1 {
+    text-align: center;
+}
+.wrapper {
+    margin: 0 auto;
+
+    max-width: 1024px;
+}
+.wrapper-graphic {
+    max-width: 82vh;
+}
+.form-line {
+    margin-bottom: .5em;
+}
+.form-line input {
+    border-radius: 4px;
+    background: #EEE;
+    margin-left: .5em;
+    margin-right: 1em;
+    border: 1px solid #999;
+    padding: 4px;
+}
+.icon-wrapper {
+    margin: auto;
+    width: 82vh;
+}
+
+.icon {
+    width: 7.5vh;
+    height: 7.5vh;
+    border-radius: 50%;
+    background: #999;
+    display: inline-block;
+    text-align: center;
+    line-height: 11vh;
+    margin: 0.3vh;
+}
+
+.icon img {
+    width: 60%;
+}
+
+.peaton {
+    background: #1d542c;
+}
+
+.auto {
+    background: #702829;
+}
+
+.colectivo {
+    background: #9c601a;
+}
+
+.bicicleta {
+    background: #1b72b9;
+}
